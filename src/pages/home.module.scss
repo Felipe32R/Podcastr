@@ -1,7 +1,43 @@
 .homepage {
   padding: 0 4rem;
-  height: calc(100vh - 6.5rem);
-  overflow-y: scroll;
+  height: calc(100vh - 6.5rem); // tamanho da tela menos o do cabeçalho
+  overflow-y: scroll; // aplica o scroll no container
+ 
+  .box {
+    margin-top: 1rem;
+    width: 40px;
+    height: 10px;
+    float: right;
+    background: gray;
+    position: relative;
+    border-radius: 3px;
+  }
+  .dark {
+    background: #333333;
+  }
+  input{
+    visibility: hidden;
+  }
+  label {
+    text-indent: -9999px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: all .6s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background: #333333;
+  
+}
+
+input:checked + label {
+    left: 27px;
+    background: #f7f7f7;
+}
+
 
   h2 {
     margin-top: 3rem;
@@ -10,6 +46,7 @@
 }
 
 @media screen and (max-width: 1670px) {
+  //Adaptação à telas menores (responsividade)
   .latestEpisodes {
     li {
       -webkit-box-orient: vertical;
@@ -27,9 +64,9 @@
 
 .latestEpisodes {
   ul {
-    list-style: none;
+    list-style: none; // remove os marcadores de lista
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; // 2 colunas ( repeat(2,1fr))
     gap: 1.5rem;
 
     li {
@@ -58,7 +95,7 @@
           color: var(--gray-800);
           font-family: Lexand, sans-serif;
           font-weight: 600;
-          text-decoration: none;
+          text-decoration: none; //remove o underline do <a/>
           line-height: 1.4rem;
 
           &:hover {
@@ -69,10 +106,10 @@
         p {
           font-size: 0.875rem;
           margin-top: 0.5rem;
-          max-width: 70%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          max-width: 70%; //não ocupar o espaço do botão
+          white-space: nowrap; // nunca quebra de linha
+          overflow: hidden; // o que passar de 70% de largura não fica visível
+          text-overflow: ellipsis; //retiscências para quando tiver overflow
         }
 
         span {
@@ -81,11 +118,13 @@
           font-size: 0.875rem;
 
           &:last-child {
+            //criação da "bolinha" a partir do último filho
             margin-left: 0.5rem;
             padding-left: 0.5rem;
             position: relative;
 
             &::before {
+              //criação da "bolinha" entre os spans
               content: '';
               width: 4px;
               height: 4px;
@@ -94,11 +133,13 @@
               position: absolute;
               left: 0;
               top: 50%;
-              transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); // -50% para baixo e -50% para
+              //a esquerda, alinhado a "bolinha" totalmente
             }
           }
         }
       }
+
       button {
         position: absolute;
         right: 2rem;
@@ -109,13 +150,83 @@
         background: var(--white);
         border: 1px solid var(--gray-100);
         border-radius: 0.675rem;
-        font-size: 0;
+        font-size: 0; // alinha a imagem no centro do botão
+
+        transition: 0.4s ease;
 
         img {
           width: 1.5rem;
           height: 1.5rem;
         }
+
+        &:hover {
+          filter: brightness(0.95);
+        }
       }
     }
   }
 }
+
+.allEpisodes {
+  padding-bottom: 2rem;
+
+  table {
+    width: 100%;
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    th {
+      color: var(--gray-200);
+      text-transform: uppercase;
+
+      font: 500 0.75rem Lexend, sans-serif;
+      text-align: left;
+    }
+
+    td {
+      font-size: 0.875rem;
+      img {
+        border-radius: 0.5rem;
+      }
+      a {
+        color: var(--gray-800);
+        font-family: Lexend, sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        line-height: 1.4rem;
+        font-size: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      button {
+        width: 2rem;
+        height: 2rem;
+        background: var(--white);
+        border: 1px solid var(--gray-100);
+        border-radius: 0.5rem;
+        font-size: 0;
+
+        transition: 0.4s ease;
+
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        &:hover {
+          
+          filter: brightness(0.95);
+        }
+      }
+    }
+  }
+}
+
+
+

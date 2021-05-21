@@ -50,13 +50,6 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
         <title>Podcastr | Home</title>
       </Head>
 
-    
-
-      <div className={styles.box}>
-        <input id="checkbox" type="checkbox"/>
-        <label htmlFor="checkbox"></label>
-      </div>
-
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
         <ul>

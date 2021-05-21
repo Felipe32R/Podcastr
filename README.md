@@ -1,5 +1,3 @@
-![logo](G:\nlw\NLW5\podcastr\public\logo.svg)
-
 ## podcastr
 
 An beautiful podcast player made in **#NextLevelWeek5** event by [**Rocketseat**](https://rocketseat.com.br/) using  [**Next.js**](https://nextjs.org/), [**Typescript**](https://www.typescriptlang.org/) and [**React**](https://reactjs.org/).
@@ -10,7 +8,7 @@ An beautiful podcast player made in **#NextLevelWeek5** event by [**Rocketseat**
 
 <br>
 
-```
+```html
 
 $ git clone https://github.com/Felipe32R/podcastr.git  
 

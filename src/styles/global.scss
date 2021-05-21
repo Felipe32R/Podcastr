@@ -34,7 +34,9 @@
 
 body {
   background: var(--gray-50);
+  overflow-y: hidden;
 }
+
 
 body,
 input,
@@ -65,3 +67,4 @@ h2 {
 button {
   cursor: pointer;
 }
+

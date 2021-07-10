@@ -1,6 +1,6 @@
 ## podcastr
 
-An beautiful podcast player made in **#NextLevelWeek5** event by [**Rocketseat**](https://rocketseat.com.br/) using  [**Next.js**](https://nextjs.org/), [**Typescript**](https://www.typescriptlang.org/) and [**React**](https://reactjs.org/).
+A beautiful podcast player made in **#NextLevelWeek5** event by [**Rocketseat**](https://rocketseat.com.br/) using  [**Next.js**](https://nextjs.org/), [**Typescript**](https://www.typescriptlang.org/) and [**React**](https://reactjs.org/).
 
 <br>
 
